@@ -57,4 +57,30 @@ Con dicho usuario hemos creado la siguiente estructura de tablas.
 
 <h2>Diagrama Entidad/Relación</h2>
 <img src="./readme/diagrama_er.png">
+
+<p>Para una mayor simplicidad, el detalle_pedido tiene una clave primaria autogenerada (en vez de tener una compuesta por id_pedido y ref_producto)</p>
+<img src="./readme/tablas.png">
+<h2>Diagrama UML</h2>
+<img src="./readme/diagrama_uml.png">
+<h2>Casos de uso</h2>
+<img src="./readme/casos_uso.png">
+<h2>Estructura archivos</h2>
+<img src="./readme/estructura_archivos.png">
+
+<h2>Persistencia</h2>
+<p>Debido a que Tomcat no es un contenedor de EJB luego no soporta correctamente la inyección del EntityManagerFactory en las clases de los servicios. Por ello tenemos que hacer esta modificación en el CREATE, DELETE y EDIT </p>
+<p><b>Archivo AbstractFacade.Java</b></p>
+<img src="./readme/persistencia.png">
+<p>Igualmente hemos de modificar los archivos de cada entidad para añadir la siguiente línea en el constructor de cada clase:</p>
+<code>this.em = Persistence.createEntityManagerFactory("gestion_almacen3PU").createEntityManager();</code>
+<p>Por ejemplo, en el archive ClienteFacadaREST:</p>
+<img src="./readme/injeccion.png">
+<p>De esta forma resolvemos el problema de injección de dependencias.</p>
+
+<h2>CORS</h2>
+<p>Para resolver el problema de CORS desde los navegadores, podemos añadir este filtro. En mi caso lo he hecho desde el propio Netbeans: botón derecho sobre el proyecto/new y elegimos filter. He mantenido el código que se ha generado de forma automática salvo el método “doFilter” en el cual he sustuido el código que había por este:</p>
+<img src="./readme/cors.png">
+
+
+
 </div>
