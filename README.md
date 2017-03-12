@@ -56,5 +56,5 @@ Con dicho usuario hemos creado la siguiente estructura de tablas.
 </p>
 
 <h2>Diagrama Entidad/Relación</h2>
-<img src=".readme/diagrama_er.png">
+<img src="./readme/diagrama_er.png">
 </div>
