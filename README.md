@@ -48,5 +48,13 @@ Para la implementación del proyecto hemos usado las siguientes tecnologías:
 	</li>
 </ul>
 
+<h2>Estructura</h2>
 
+<h3>Base de datos</h3>
+<p>Como root hemos creado la base de datos “almacén3” y el usuario “almace_gestor” (y contraseña “gestor”) con los permisos adecuados para gestionarla. 
+Con dicho usuario hemos creado la siguiente estructura de tablas.
+</p>
+
+<h2>Diagrama Entidad/Relación</h2>
+<img src=".readme/diagrama_er.png">
 </div>
