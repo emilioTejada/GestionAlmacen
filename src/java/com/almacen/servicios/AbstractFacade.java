@@ -31,8 +31,7 @@ public abstract class AbstractFacade<T> {
         em.persist(entity);
         et.commit();
     }
-    
-    
+     
     public T create2(T entity) {
         //getEntityManager().persist(entity);
         EntityManager em = getEntityManager();
@@ -45,16 +44,12 @@ public abstract class AbstractFacade<T> {
     
     public void edit(T entity) {
         //getEntityManager().merge(entity);
-        
         EntityManager em = getEntityManager();
         EntityTransaction et = em.getTransaction();
         et.begin();
         em.merge(entity);
-        et.commit();
-        
-        
+        et.commit(); 
     }
-
     public void remove(T entity) {
        // getEntityManager().remove(getEntityManager().merge(entity));
         EntityManager em = getEntityManager();

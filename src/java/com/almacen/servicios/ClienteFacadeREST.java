@@ -34,7 +34,6 @@ public class ClienteFacadeREST extends AbstractFacade<Cliente> {
     public ClienteFacadeREST() {
         super(Cliente.class);       
         this.em = Persistence.createEntityManagerFactory("gestion_almacen3PU").createEntityManager();
-
     }
 
     @POST
